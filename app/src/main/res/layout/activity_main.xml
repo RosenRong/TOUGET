@@ -352,8 +352,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_weight="1"
-        android:background="@color/bgcolor">
-
+        android:background="@color/baise">
         <include layout="@layout/bottom_layout" />
     </LinearLayout>
 </LinearLayout>
