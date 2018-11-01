@@ -139,10 +139,10 @@
 
                         <ImageView
                             android:id="@+id/imageView"
-                            android:layout_width="55dp"
+                            android:layout_width="35dp"
                             android:layout_height="match_parent"
                             android:layout_marginBottom="0dp"
-                            android:layout_marginStart="0dp"
+                            android:layout_marginStart="15dp"
                             android:layout_marginTop="0dp"
                             android:src="@mipmap/task3"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -151,10 +151,10 @@
 
                         <ImageView
                             android:id="@+id/me_news"
-                            android:layout_width="45dp"
-                            android:layout_height="37dp"
+                            android:layout_width="35dp"
+                            android:layout_height="match_parent"
                             android:layout_marginBottom="0dp"
-                            android:layout_marginEnd="0dp"
+                            android:layout_marginEnd="15dp"
                             android:src="@mipmap/news2"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
