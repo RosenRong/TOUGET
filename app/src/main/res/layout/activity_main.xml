@@ -8,8 +8,6 @@
     android:background="@color/bgcolor"
     android:id="@+id/biglayouts">
 
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="436dp"
@@ -53,19 +51,21 @@
                     android:layout_centerHorizontal="true"
                     android:id="@+id/shouye">
 
-                    <TextView
+                    <RelativeLayout
                         android:id="@+id/tuijian"
                         android:layout_width="match_parent"
                         android:layout_height="113dp"
                         android:layout_marginTop="20dp"
                         android:background="@drawable/borders"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="推荐"
-                        android:textColor="#000"
-                        android:textSize="24sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+                        app:layout_constraintTop_toTopOf="parent" >
+                        <com.example.s8534.myaitme.NoScrollWebView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/tuijianweb">
+                        </com.example.s8534.myaitme.NoScrollWebView>
+                    </RelativeLayout>
 
                     <TextView
                         android:id="@+id/pingpai"

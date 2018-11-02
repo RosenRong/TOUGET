@@ -12,6 +12,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.EditText;
@@ -25,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 ImageView myhome,classify,order,homepage,top_news,me_news;
 
 WebView webfeilei,webdingdan;
+
+NoScrollWebView tuijianweb;
 
 RelativeLayout fenlei,mein;
 
@@ -59,6 +62,8 @@ LinearLayout biglayouts;
 
         //找到在分类布局下的分类web的id
         webfeilei=findViewById(R.id.webfenlei);
+        //找到在主页布局下的推荐web的id
+        tuijianweb=findViewById(R.id.tuijianweb);
 
         //点击主页和分类的时候搜索框失去焦点
         homepages.setOnTouchListener(new View.OnTouchListener() {
@@ -103,6 +108,11 @@ LinearLayout biglayouts;
         //设置订单web的打开方式为内置在app打开
         webdingdan.getSettings().setJavaScriptEnabled(true);
         webdingdan.setWebViewClient(new WebViewClient());
+        //设置推荐web的js功能可以使用
+        //设置推荐web的打开方式为内置在app打开
+        tuijianweb.getSettings().setJavaScriptEnabled(true);
+        tuijianweb.setWebChromeClient(new WebChromeClient());
+        tuijianweb.loadUrl("http://spk18384229726.gz01.bdysite.com/html/imgs/imgs.htm");
 
         //点击主页返回到主页就是把其他布局全部隐藏
         homepage=findViewById(R.id.home_page);
