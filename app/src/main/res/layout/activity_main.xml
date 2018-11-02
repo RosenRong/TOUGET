@@ -44,57 +44,152 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sousuolan">
 
-                <android.support.constraint.ConstraintLayout
+                <ScrollView
                     android:layout_width="326dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
-                    android:id="@+id/shouye">
-
-                    <RelativeLayout
-                        android:id="@+id/tuijian"
+                    android:scrollbars="none">
+                    <android.support.constraint.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="113dp"
-                        android:layout_marginTop="20dp"
-                        android:background="@drawable/borders"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" >
-                        <com.example.s8534.myaitme.NoScrollWebView
+                        android:layout_height="match_parent"
+                        android:id="@+id/shouye">
+
+                        <RelativeLayout
+                            android:id="@+id/tuijian"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:id="@+id/tuijianweb">
-                        </com.example.s8534.myaitme.NoScrollWebView>
-                    </RelativeLayout>
+                            android:layout_height="113dp"
+                            android:layout_marginTop="20dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" >
+                            <com.example.s8534.myaitme.NoScrollWebView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/tuijianweb">
+                            </com.example.s8534.myaitme.NoScrollWebView>
+                        </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/pingpai"
-                        android:layout_width="match_parent"
-                        android:layout_height="128dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@drawable/borders"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="品牌进入口"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/tuijian" />
+                        <RelativeLayout
+                            android:id="@+id/pingpai"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_marginTop="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/tuijian" >
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/logo2"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/logo3"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/logo3"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@mipmap/logo2"
+                                    android:layout_weight="1"
+                                    android:scaleType="fitXY"/>
+                            </LinearLayout>
+                        </RelativeLayout>
 
-                    <TextView
-                        android:id="@+id/zhanshi"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@drawable/borders"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="成果展示"
-                        android:textColor="#000"
-                        android:textSize="24sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/pingpai" />
-                </android.support.constraint.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/zhanshiImg1"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@mipmap/zhanshi3"
+                            android:scaleType="fitXY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pingpai"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="15dp"/>
+                        <TextView
+                            android:id="@+id/zhanshitext1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:gravity="left"
+                            android:text="成果展示"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/zhanshiImg1" />
+                        <ImageView
+                            android:id="@+id/zhanshiImg2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@mipmap/zhanshi3"
+                            android:scaleType="fitXY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/zhanshitext1"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="15dp"/>
+                        <TextView
+                            android:id="@+id/zhanshitext2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:gravity="left"
+                            android:text="成果展示"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/zhanshiImg2" />
+                        <ImageView
+                            android:id="@+id/zhanshiImg3"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:src="@mipmap/zhanshi3"
+                            android:scaleType="fitXY"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/zhanshitext2"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginTop="15dp"/>
+                        <TextView
+                            android:id="@+id/zhanshitext3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:gravity="left"
+                            android:text="成果展示"
+                            android:textColor="#000"
+                            android:textSize="18sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/zhanshiImg3" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/zhanshitext3" />
+                    </android.support.constraint.ConstraintLayout>
+                </ScrollView>
+
 
                 <RelativeLayout
                     android:id="@+id/fenlei_webs"
