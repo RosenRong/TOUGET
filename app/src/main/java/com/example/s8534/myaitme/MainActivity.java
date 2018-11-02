@@ -23,7 +23,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-ImageView myhome,classify,order,homepage,top_news,me_news;
+ImageView myhome,classify,order,homepage,top_news,me_news,top_sao;
 
 WebView webfeilei,webdingdan;
 
@@ -135,6 +135,10 @@ LinearLayout biglayouts;
         top_news.setOnClickListener(this);
         me_news=findViewById(R.id.me_news);
         me_news.setOnClickListener(this);
+
+        //打开扫一扫
+        top_sao=findViewById(R.id.top_sao);
+        top_sao.setOnClickListener(this);
     }
 
     @Override //各种的点击事件
@@ -190,6 +194,10 @@ LinearLayout biglayouts;
             case R.id.me_news:
                 Intent intent1=new Intent(MainActivity.this,NewActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.top_sao://打开扫一扫
+                Intent intent2=new Intent(MainActivity.this,ScanActivity.class);
+                startActivity(intent2);
                 break;
             default:
         }

@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
-public class NewActivity extends AppCompatActivity{
+public class ScanActivity extends AppCompatActivity{
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +18,7 @@ public class NewActivity extends AppCompatActivity{
         //调用初始化的手机状态栏的颜色2为初始化颜色1为订单栏颜色
         backcolors(2);
         //加载activity_main 布局
-        setContentView(R.layout.new_layout);
+        setContentView(R.layout.scan_layout);
 
         //去掉默认的标题栏
         ActionBar actionBar=getSupportActionBar();
@@ -31,7 +31,7 @@ public class NewActivity extends AppCompatActivity{
     //i等于其他的值的时候就标是恢复默认的颜色
     public void backcolors(int i){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            SystemBarTintManager tin=new SystemBarTintManager(NewActivity.this);
+            SystemBarTintManager tin=new SystemBarTintManager(ScanActivity.this);
             setTranslucentStatus(true);
             tin.setStatusBarTintEnabled(true);
             if(i==1)
