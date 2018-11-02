@@ -112,7 +112,7 @@ LinearLayout biglayouts;
         //设置推荐web的打开方式为内置在app打开
         tuijianweb.getSettings().setJavaScriptEnabled(true);
         tuijianweb.setWebChromeClient(new WebChromeClient());
-        tuijianweb.loadUrl("http://spk18384229726.gz01.bdysite.com/html/imgs/imgs.htm");
+        tuijianweb.loadUrl("file:///android_asset/imgs.htm");
 
         //点击主页返回到主页就是把其他布局全部隐藏
         homepage=findViewById(R.id.home_page);
