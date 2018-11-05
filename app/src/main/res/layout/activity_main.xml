@@ -21,15 +21,50 @@
             <LinearLayout
                 android:id="@+id/sousuolan"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_marginEnd="0dp"
-                android:layout_marginStart="0dp"
+                android:layout_height="35dp"
+                android:layout_marginEnd="2mm"
+                android:layout_marginStart="2mm"
                 android:layout_marginTop="0dp"
+                android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true" >
 
-                <include layout="@layout/head_layout" />
+
+
+                    <ImageView
+                        android:id="@+id/top_sao"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:src="@mipmap/sao"
+                         />
+
+                    <EditText
+                        android:id="@+id/title_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="left"
+                        android:hint="搜索"
+                        android:textColor="#000"
+                        android:textSize="20sp"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="2mm"
+                        android:layout_marginRight="2mm"/>
+
+                    <ImageView
+                        android:id="@+id/top_news"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="5"
+                        android:src="@mipmap/news2" />
+
+
             </LinearLayout>
 
             <RelativeLayout

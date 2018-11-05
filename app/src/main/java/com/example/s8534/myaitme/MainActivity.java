@@ -34,6 +34,7 @@ RelativeLayout fenlei,mein;
 ConstraintLayout sousuolan,homepages;
 
 LinearLayout biglayouts;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -139,6 +140,7 @@ LinearLayout biglayouts;
         //打开扫一扫
         top_sao=findViewById(R.id.top_sao);
         top_sao.setOnClickListener(this);
+
     }
 
     @Override //各种的点击事件
