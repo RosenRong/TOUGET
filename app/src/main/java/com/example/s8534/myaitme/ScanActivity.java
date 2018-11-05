@@ -1,7 +1,6 @@
 package com.example.s8534.myaitme;
 
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,7 +9,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 
+
 public class ScanActivity extends AppCompatActivity{
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,8 +24,8 @@ public class ScanActivity extends AppCompatActivity{
         //去掉默认的标题栏
         ActionBar actionBar=getSupportActionBar();
         if(actionBar!=null)actionBar.hide();
-    }
 
+    }
 
     //根据i返回过来的值设置android的状态栏颜色
     //i==1 就是订单的颜色
@@ -56,4 +57,9 @@ public class ScanActivity extends AppCompatActivity{
     }
 
 }
+
+
+
+
+
 
