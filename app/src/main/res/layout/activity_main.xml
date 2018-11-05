@@ -80,7 +80,8 @@
                 app:layout_constraintTop_toBottomOf="@+id/sousuolan">
 
                 <ScrollView
-                    android:layout_width="326dp"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
@@ -271,9 +272,9 @@
                             android:id="@+id/imageView"
                             android:layout_width="30dp"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="0dp"
                             android:layout_marginStart="15dp"
                             android:layout_marginTop="0dp"
+                            android:layout_marginBottom="0dp"
                             android:src="@mipmap/task3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -283,8 +284,8 @@
                             android:id="@+id/me_news"
                             android:layout_width="30dp"
                             android:layout_height="match_parent"
-                            android:layout_marginBottom="0dp"
                             android:layout_marginEnd="15dp"
+                            android:layout_marginBottom="0dp"
                             android:src="@mipmap/news2"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -299,26 +300,29 @@
                             android:id="@+id/my_pictrue"
                             android:layout_width="132dp"
                             android:layout_height="117dp"
-                            android:layout_marginBottom="8dp"
-                            android:layout_marginEnd="8dp"
                             android:layout_marginStart="8dp"
                             android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
                             android:src="@mipmap/logo3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
                     </android.support.constraint.ConstraintLayout>
+
                     <TextView
+                        android:id="@+id/my_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/my_name"
+                        android:gravity="center_horizontal"
                         android:text="name"
-                        android:textSize="24sp"
                         android:textColor="#000"
-                        android:gravity="center_horizontal"/>
+                        android:textSize="24sp" />
 
                     <LinearLayout
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:orientation="horizontal">
@@ -332,7 +336,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="未付款"
                             android:textColor="#000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/not_yet_shipped"
@@ -343,7 +347,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="未发货"
                             android:textColor="#000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/no_receipt"
@@ -354,7 +358,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="未收货"
                             android:textColor="#000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/evaluate"
@@ -365,7 +369,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="评价"
                             android:textColor="#000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
 
                         <TextView
                             android:id="@+id/return_good"
@@ -376,7 +380,7 @@
                             android:gravity="center_horizontal|center_vertical"
                             android:text="退货"
                             android:textColor="#000"
-                            android:textSize="24sp" />
+                            android:textSize="20sp" />
                     </LinearLayout>
 
                     <RelativeLayout
@@ -384,7 +388,8 @@
                         android:layout_height="220dp">
 
                         <LinearLayout
-                            android:layout_width="308dp"
+                            android:layout_margin="25dp"
+                            android:layout_width="match_parent"
                             android:layout_height="152dp"
                             android:layout_centerInParent="true"
                             android:orientation="vertical">
@@ -478,12 +483,43 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="25dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_weight="1"
-        android:background="@color/bgcolor">
+        android:layout_height="30dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <include layout="@layout/bottom_layout" />
+        <ImageView
+            android:id="@+id/home_page"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/homepage2" />
+
+        <ImageView
+            android:id="@+id/classification"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/listview2" />
+
+        <ImageView
+            android:id="@+id/order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/dingdan2" />
+
+        <ImageView
+            android:id="@+id/My"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@mipmap/me2" />
     </LinearLayout>
 </LinearLayout>
