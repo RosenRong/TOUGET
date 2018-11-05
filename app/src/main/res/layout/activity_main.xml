@@ -286,8 +286,8 @@
                         android:textSize="24sp" />
 
                     <LinearLayout
-                        android:layout_marginLeft="25dp"
-                        android:layout_marginRight="25dp"
+                        android:layout_marginLeft="2mm"
+                        android:layout_marginRight="2mm"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
                         android:orientation="horizontal">
@@ -353,7 +353,7 @@
                         android:layout_height="220dp">
 
                         <LinearLayout
-                            android:layout_margin="25dp"
+                            android:layout_margin="2mm"
                             android:layout_width="match_parent"
                             android:layout_height="152dp"
                             android:layout_centerInParent="true"
