@@ -24,6 +24,7 @@ public class NoScrollWebView extends WebView {
     public NoScrollWebView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
     }
+
     //禁止滑动
     @Override
     public boolean onTouchEvent(MotionEvent event) {

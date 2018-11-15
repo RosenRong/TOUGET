@@ -198,7 +198,7 @@ LinearLayout biglayouts;
                 startActivity(intent1);
                 break;
             case R.id.top_sao://打开扫一扫
-                Intent intent2=new Intent(MainActivity.this,Caera2_startActivity.class);
+                Intent intent2=new Intent(MainActivity.this,ScanActivity.class);
                 startActivity(intent2);
                 break;
             default:
