@@ -1,26 +1,21 @@
 package com.example.s8534.myaitme;
 
-import android.annotation.TargetApi;
 import android.content.Intent;
-import android.graphics.Color;
-import android.os.Build;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+
+
+import com.gyf.barlibrary.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 ImageView myhome,classify,order,homepage,top_news,me_news,top_sao;
@@ -40,9 +35,14 @@ LinearLayout biglayouts;
         super.onCreate(savedInstanceState);
 
         //调用初始化的手机状态栏的颜色2为初始化颜色1为订单栏颜色
-        backcolors(2);
+        //backcolors(2);
         //加载activity_main 布局
         setContentView(R.layout.activity_main);
+        ImmersionBar.with(this)
+                .transparentNavigationBar()
+                .fullScreen(false)
+                .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
+                .init(); //初始化，默认透明状态栏和黑色导航栏
 
         //去掉默认的标题栏
         ActionBar actionBar=getSupportActionBar();
@@ -153,7 +153,7 @@ LinearLayout biglayouts;
                 webdingdan.setVisibility(View.GONE);
                 mein.setVisibility(View.GONE);
                 //每次点击就初始化一次android的状态栏颜色
-                backcolors(2);
+
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
@@ -165,7 +165,7 @@ LinearLayout biglayouts;
                 webdingdan.setVisibility(View.GONE);
                 mein.setVisibility(View.GONE);
                 //每次点击就初始化一次android的状态栏颜色
-                backcolors(2);
+
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
@@ -177,7 +177,7 @@ LinearLayout biglayouts;
                 webdingdan.setVisibility(View.VISIBLE);
                 mein.setVisibility(View.GONE);
                 //当点击订单时 根据订单的颜色改变android状态栏的颜色
-                backcolors(1);
+
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.dingdan));
                 break;
@@ -188,7 +188,7 @@ LinearLayout biglayouts;
                 webdingdan.setVisibility(View.GONE);
                 mein.setVisibility(View.VISIBLE);
                 //每次点击就初始化一次android的状态栏颜色
-                backcolors(2);
+
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
@@ -204,35 +204,5 @@ LinearLayout biglayouts;
             default:
         }
     }
-
-    //根据i返回过来的值设置android的状态栏颜色
-    //i==1 就是订单的颜色
-    //i等于其他的值的时候就标是恢复默认的颜色
-    public void backcolors(int i){
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            SystemBarTintManager tin=new SystemBarTintManager(MainActivity.this);
-            setTranslucentStatus(true);
-            tin.setStatusBarTintEnabled(true);
-            if(i==1)
-                tin.setStatusBarTintResource(R.color.dingdan);//通知栏所需颜色
-            else
-                tin.setStatusBarTintResource(R.color.bgcolor);//通知栏所需颜色
-        }
-    }
-
-
-    @TargetApi(19)//更改android状态栏的颜色的具体调用方法
-    private void setTranslucentStatus(boolean on) {
-        Window win = getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
-        if (on) {
-            winParams.flags |= bits;
-        } else {
-            winParams.flags &= ~bits;
-        }
-        win.setAttributes(winParams);
-    }
-
 
 }
