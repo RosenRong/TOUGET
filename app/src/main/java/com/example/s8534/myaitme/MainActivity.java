@@ -19,7 +19,7 @@ import com.gyf.barlibrary.ImmersionBar;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 ImageView myhome,classify,order,homepage,top_news,me_news,top_sao;
 
-WebView webfeilei,webdingdan;
+WebView webdingdan;
 
 NoScrollWebView tuijianweb;
 
@@ -61,7 +61,7 @@ LinearLayout biglayouts;
         mein=findViewById(R.id.mein);
 
         //找到在分类布局下的分类web的id
-        webfeilei=findViewById(R.id.webfenlei);
+//        webfeilei=findViewById(R.id.webfenlei);
         //找到在主页布局下的推荐web的id
         tuijianweb=findViewById(R.id.tuijianweb);
 
@@ -101,8 +101,8 @@ LinearLayout biglayouts;
 
         //设置分类web的js功能可以使用
         //设置分类web的打开方式为内置在app打开
-        webfeilei.getSettings().setJavaScriptEnabled(true);
-        webfeilei.setWebViewClient(new WebViewClient());
+//        webfeilei.getSettings().setJavaScriptEnabled(true);
+//        webfeilei.setWebViewClient(new WebViewClient());
 
         //设置订单web的js功能可以使用
         //设置订单web的打开方式为内置在app打开
@@ -156,8 +156,8 @@ LinearLayout biglayouts;
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
             case R.id.classification://点击分类进入到分类网页把其他布局全部隐藏
-                Intent intent=new Intent(MainActivity.this,ClassActivity.class);
-                startActivity(intent);
+//                Intent intent=new Intent(MainActivity.this,ClassActivity.class);
+//                startActivity(intent);
                 sousuolan.setVisibility(View.VISIBLE);
                 homepages.setVisibility(View.GONE);
                 fenlei.setVisibility(View.VISIBLE);
@@ -191,7 +191,7 @@ LinearLayout biglayouts;
                 startActivity(intent1);
                 break;
             case R.id.top_sao://打开扫一扫
-                Intent intent2=new Intent(MainActivity.this,ScanActivity.class);
+                Intent intent2=new Intent(MainActivity.this,Caera2_startActivity.class);
                 startActivity(intent2);
                 break;
             default:

@@ -10,4 +10,7 @@
     <color name="class_Bg">#EEEEEE</color>
     <color name="class_zi">#8F8F8F</color>
     <color name="class_ziXz">#EE7621</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
 </resources>
