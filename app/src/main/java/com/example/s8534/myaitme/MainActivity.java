@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-
 import com.gyf.barlibrary.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -157,6 +156,8 @@ LinearLayout biglayouts;
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
             case R.id.classification://点击分类进入到分类网页把其他布局全部隐藏
+                Intent intent=new Intent(MainActivity.this,ClassActivity.class);
+                startActivity(intent);
                 sousuolan.setVisibility(View.VISIBLE);
                 homepages.setVisibility(View.GONE);
                 fenlei.setVisibility(View.VISIBLE);
@@ -172,8 +173,6 @@ LinearLayout biglayouts;
                 fenlei.setVisibility(View.GONE);
                 webdingdan.setVisibility(View.VISIBLE);
                 mein.setVisibility(View.GONE);
-                //当点击订单时 根据订单的颜色改变android状态栏的颜色
-
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.dingdan));
                 break;

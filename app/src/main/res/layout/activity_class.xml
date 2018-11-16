@@ -11,52 +11,75 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
-                <Button
+                <RadioGroup
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:text="热卖推荐"/>
-                <TextView
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn1"
-                    android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:gravity="center"
+                    android:checked="true"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="热卖推荐"/>
-                <TextView
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn2"
                     android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="卧室家具"/>
-                <TextView
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn3"
                     android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="客厅家具"/>
-                <TextView
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn4"
                     android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="书房家具"/>
-                <TextView
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn5"
                     android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="阳台户外"/>
-                <TextView
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn6"
                     android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_height="60dp"
                     android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="儿童家具"/>
-                <TextView
+                <RadioButton
+                    android:textColor="@drawable/class_zi"
                     android:id="@+id/class_btn7"
                     android:layout_width="100dp"
-                    android:layout_height="40dp"
+                    android:layout_height="50dp"
                     android:gravity="center"
+                    android:button="@null"
+                    android:background="@drawable/class_btn_bg"
                     android:text="厨房卫浴"/>
+                </RadioGroup>
             </LinearLayout>
     </RelativeLayout>
     <RelativeLayout
