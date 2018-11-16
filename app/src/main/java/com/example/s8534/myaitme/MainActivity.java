@@ -153,19 +153,15 @@ LinearLayout biglayouts;
                 webdingdan.setVisibility(View.GONE);
                 mein.setVisibility(View.GONE);
                 //每次点击就初始化一次android的状态栏颜色
-
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
             case R.id.classification://点击分类进入到分类网页把其他布局全部隐藏
-                webfeilei.loadUrl("http://spk18384229726.gz01.bdysite.com/html/class/index.htm");
                 sousuolan.setVisibility(View.VISIBLE);
                 homepages.setVisibility(View.GONE);
                 fenlei.setVisibility(View.VISIBLE);
                 webdingdan.setVisibility(View.GONE);
                 mein.setVisibility(View.GONE);
-                //每次点击就初始化一次android的状态栏颜色
-
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
@@ -187,8 +183,6 @@ LinearLayout biglayouts;
                 fenlei.setVisibility(View.GONE);
                 webdingdan.setVisibility(View.GONE);
                 mein.setVisibility(View.VISIBLE);
-                //每次点击就初始化一次android的状态栏颜色
-
                 //并设置最大的布局的颜色为相应的颜色
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
