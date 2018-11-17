@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.example.s8534.myaitme.listview.ListViewActivity;
 import com.gyf.barlibrary.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -28,6 +29,7 @@ RelativeLayout fenlei,mein;
 ConstraintLayout sousuolan,homepages;
 
 LinearLayout biglayouts;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -182,12 +184,12 @@ LinearLayout biglayouts;
                 break;
             case R.id.top_news://打开消息界面
             case R.id.me_news:
-                Intent intent1=new Intent(MainActivity.this,NewActivity.class);
-                startActivity(intent1);
+                Intent intent=new Intent(MainActivity.this,NewActivity.class);
+                startActivity(intent);
                 break;
             case R.id.top_sao://打开扫一扫
-                Intent intent2=new Intent(MainActivity.this,Caera2_startActivity.class);
-                startActivity(intent2);
+                Intent intent1=new Intent(MainActivity.this,Caera2_startActivity.class);
+                startActivity(intent1);
                 break;
             default:
         }
