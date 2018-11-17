@@ -1,91 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/biglayouts"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/bgcolor"
-    android:id="@+id/biglayouts">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="436dp"
-        android:layout_weight="10"
-        android:layout_marginTop="23dp">
+        android:layout_marginTop="23dp"
+        android:layout_weight="10">
 
         <android.support.constraint.ConstraintLayout
+            android:id="@+id/yousuosou"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/yousuosou">
+            android:layout_height="match_parent">
+
             <LinearLayout
                 android:id="@+id/sousuolan"
                 android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_marginEnd="2mm"
                 android:layout_marginStart="2mm"
                 android:layout_marginTop="0dp"
+                android:layout_marginEnd="2mm"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                android:focusable="true"
-                android:focusableInTouchMode="true" >
+                app:layout_constraintTop_toTopOf="parent">
 
-                    <ImageView
-                        android:id="@+id/top_sao"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="5"
-                        android:src="@mipmap/sao"
-                         />
+                <ImageView
+                    android:id="@+id/top_sao"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:src="@mipmap/sao" />
 
-                    <EditText
-                        android:id="@+id/title_text"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="#fff"
-                        android:layout_gravity="center_vertical"
-                        android:gravity="left"
-                        android:hint="搜索"
-                        android:textColor="#000"
-                        android:textSize="20sp"
-                        android:layout_weight="1"
-                        android:layout_marginLeft="2mm"
-                        android:layout_marginRight="2mm"/>
+                <EditText
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="2mm"
+                    android:layout_marginRight="2mm"
+                    android:layout_weight="1"
+                    android:background="#fff"
+                    android:gravity="left"
+                    android:hint="搜索"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
 
-                    <ImageView
-                        android:id="@+id/top_news"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="5"
-                        android:src="@mipmap/news2" />
-                
+                <ImageView
+                    android:id="@+id/top_news"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="5"
+                    android:src="@mipmap/news2" />
+
             </LinearLayout>
 
             <RelativeLayout
                 android:id="@+id/homepages"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="0dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="50dp"
+                android:layout_marginEnd="0dp"
                 android:background="@color/bgcolor"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/sousuolan">
 
                 <ScrollView
-                    android:layout_marginLeft="25dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_alignParentTop="true"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="25dp"
                     android:scrollbars="none">
+
                     <android.support.constraint.ConstraintLayout
+                        android:id="@+id/shouye"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/shouye">
+                        android:layout_height="match_parent">
 
                         <RelativeLayout
                             android:id="@+id/tuijian"
@@ -94,12 +95,12 @@
                             android:layout_marginTop="20dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" >
+                            app:layout_constraintTop_toTopOf="parent">
+
                             <com.example.s8534.myaitme.NoScrollWebView
+                                android:id="@+id/tuijianweb"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/tuijianweb">
-                            </com.example.s8534.myaitme.NoScrollWebView>
+                                android:layout_height="match_parent"></com.example.s8534.myaitme.NoScrollWebView>
                         </RelativeLayout>
 
                         <RelativeLayout
@@ -109,117 +110,46 @@
                             android:layout_marginTop="15dp"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/tuijian" >
+                            app:layout_constraintTop_toBottomOf="@+id/tuijian">
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="horizontal">
+
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@mipmap/logo2"
                                     android:layout_weight="1"
-                                    android:scaleType="fitXY"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/logo2" />
+
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@mipmap/logo3"
                                     android:layout_weight="1"
-                                    android:scaleType="fitXY"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/logo3" />
+
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@mipmap/logo3"
                                     android:layout_weight="1"
-                                    android:scaleType="fitXY"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/logo3" />
+
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
-                                    android:src="@mipmap/logo2"
                                     android:layout_weight="1"
-                                    android:scaleType="fitXY"/>
+                                    android:scaleType="fitXY"
+                                    android:src="@mipmap/logo2" />
                             </LinearLayout>
                         </RelativeLayout>
 
-                        <ImageView
-                            android:id="@+id/zhanshiImg1"
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:src="@mipmap/zhanshi3"
-                            android:scaleType="fitXY"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/pingpai"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginRight="0dp"
-                            android:layout_marginTop="15dp"/>
-                        <TextView
-                            android:id="@+id/zhanshitext1"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:gravity="left"
-                            android:text="成果展示"
-                            android:textColor="#000"
-                            android:textSize="18sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/zhanshiImg1" />
-                        <ImageView
-                            android:id="@+id/zhanshiImg2"
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:src="@mipmap/zhanshi3"
-                            android:scaleType="fitXY"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/zhanshitext1"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginRight="0dp"
-                            android:layout_marginTop="15dp"/>
-                        <TextView
-                            android:id="@+id/zhanshitext2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:gravity="left"
-                            android:text="成果展示"
-                            android:textColor="#000"
-                            android:textSize="18sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/zhanshiImg2" />
-                        <ImageView
-                            android:id="@+id/zhanshiImg3"
-                            android:layout_width="match_parent"
-                            android:layout_height="200dp"
-                            android:src="@mipmap/zhanshi3"
-                            android:scaleType="fitXY"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/zhanshitext2"
-                            android:layout_marginLeft="0dp"
-                            android:layout_marginRight="0dp"
-                            android:layout_marginTop="15dp"/>
-                        <TextView
-                            android:id="@+id/zhanshitext3"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="0dp"
-                            android:gravity="left"
-                            android:text="成果展示"
-                            android:textColor="#000"
-                            android:textSize="18sp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/zhanshiImg3" />
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/zhanshitext3" />
+                        <include layout="@layout/activity_list_view" />
                     </android.support.constraint.ConstraintLayout>
+
                 </ScrollView>
 
 
@@ -227,8 +157,7 @@
                     android:id="@+id/fenlei_webs"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-
-                    <include layout="@layout/activity_class"/>
+                    <include layout="@layout/activity_class" />
                 </RelativeLayout>
             </RelativeLayout>
         </android.support.constraint.ConstraintLayout>
@@ -239,9 +168,10 @@
             android:layout_height="match_parent"></WebView>
 
         <RelativeLayout
+            android:id="@+id/mein"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/mein">
+            android:layout_height="match_parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -312,10 +242,10 @@
                         android:textSize="24sp" />
 
                     <LinearLayout
-                        android:layout_marginLeft="2mm"
-                        android:layout_marginRight="2mm"
                         android:layout_width="match_parent"
                         android:layout_height="52dp"
+                        android:layout_marginLeft="2mm"
+                        android:layout_marginRight="2mm"
                         android:orientation="horizontal">
 
                         <TextView
@@ -379,10 +309,10 @@
                         android:layout_height="220dp">
 
                         <LinearLayout
-                            android:layout_margin="2mm"
                             android:layout_width="match_parent"
                             android:layout_height="152dp"
                             android:layout_centerInParent="true"
+                            android:layout_margin="2mm"
                             android:orientation="vertical">
 
                             <LinearLayout
@@ -475,10 +405,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

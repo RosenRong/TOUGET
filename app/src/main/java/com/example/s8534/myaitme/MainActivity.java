@@ -32,9 +32,6 @@ LinearLayout biglayouts;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //调用初始化的手机状态栏的颜色2为初始化颜色1为订单栏颜色
-        //backcolors(2);
         //加载activity_main 布局
         setContentView(R.layout.activity_main);
         ImmersionBar.with(this)
@@ -156,8 +153,6 @@ LinearLayout biglayouts;
                 biglayouts.setBackgroundColor(getResources().getColor(R.color.bgcolor));
                 break;
             case R.id.classification://点击分类进入到分类网页把其他布局全部隐藏
-//                Intent intent=new Intent(MainActivity.this,ClassActivity.class);
-//                startActivity(intent);
                 sousuolan.setVisibility(View.VISIBLE);
                 homepages.setVisibility(View.GONE);
                 fenlei.setVisibility(View.VISIBLE);
