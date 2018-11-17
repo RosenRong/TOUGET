@@ -147,7 +147,18 @@
                             </LinearLayout>
                         </RelativeLayout>
 
-                        <include layout="@layout/activity_list_view" />
+                        <RelativeLayout
+                            android:id="@+id/chengguozhanshi"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="15dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/pingpai">
+                            <include layout="@layout/activity_list_view" />
+                        </RelativeLayout>
+
+
                     </android.support.constraint.ConstraintLayout>
 
                 </ScrollView>

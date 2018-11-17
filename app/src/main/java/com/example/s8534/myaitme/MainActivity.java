@@ -12,8 +12,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.example.s8534.myaitme.listview.ListViewActivity;
+import com.example.s8534.myaitme.listview.MyListAdapter;
 import com.gyf.barlibrary.ImmersionBar;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -28,6 +31,8 @@ RelativeLayout fenlei,mein;
 ConstraintLayout sousuolan,homepages;
 
 LinearLayout biglayouts;
+
+    private ListView mLv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +66,9 @@ LinearLayout biglayouts;
 //        webfeilei=findViewById(R.id.webfenlei);
         //找到在主页布局下的推荐web的id
         tuijianweb=findViewById(R.id.tuijianweb);
+
+        mLv1 = findViewById(R.id.lv_1);
+        mLv1.setAdapter(new MyListAdapter(MainActivity.this));
 
         //点击主页和分类的时候搜索框失去焦点
         homepages.setOnTouchListener(new View.OnTouchListener() {
